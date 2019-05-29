@@ -1,4 +1,4 @@
-# tos
+# risott.os
 
 Simple os created for learning and illustrative purposes. 
 
