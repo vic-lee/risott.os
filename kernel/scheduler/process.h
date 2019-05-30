@@ -15,7 +15,7 @@ const pid_t ERR_PROCESS_NOT_INITIATED = -1;
 const size_t MAX_PRIORITY = 5;
 const size_t MIN_PRIORITY = 1;
 
-enum process_state
+enum class process_state
 {
     UNINITIATED,
     RUNNING,
@@ -26,7 +26,7 @@ enum process_state
     KILLED,
 };
 
-enum protection_level
+enum class protection_level
 {
     R,   /* read-only */
     RW,  /* read-write */
