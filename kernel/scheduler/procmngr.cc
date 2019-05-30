@@ -20,7 +20,7 @@ pid_t ProcessManager::load()
         return ERR_PROCESS_NOT_INITIATED;
 
     pid_t pid = pidctr_++;
-    process_t proc = process_t(pid, 1000, 1, false);
+    process_t proc = process_t(pid, 1000, MIN_PRIORITY, false);
     processtable_.insert(PCB_t(pid, proc));
 
     return pid;
