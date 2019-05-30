@@ -7,5 +7,4 @@ int main(int argc, char *argv[])
 {
     kernel::Config cfg = kernel::Config();
     scheduler::ProcessManager pmg = scheduler::ProcessManager();
-    pmg.load();
 }
