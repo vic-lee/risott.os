@@ -2,13 +2,17 @@
 
 #include "procmngr.h"
 #include "process.h"
+#include "scheduler.h"
 
 namespace scheduler
 {
 unsigned int ProcessManager::pidctr_ = 10;
 const unsigned int ProcessManager::MAX_ACTIVE_PROCESS_COUNT_ = 500;
 
-ProcessManager::ProcessManager() {}
+ProcessManager::ProcessManager() 
+{
+    sch_ = Scheduler(pm_algo::FIFO);
+}
 
 pid_t ProcessManager::load()
 {

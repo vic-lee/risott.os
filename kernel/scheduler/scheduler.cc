@@ -3,6 +3,11 @@
 namespace scheduler
 {
 
-Scheduler::Scheduler(scheduling_algorithm algo) : algo_(algo) {}
+Scheduler::Scheduler()
+{
+    Scheduler(pm_algo::FIFO);
+}
+
+Scheduler::Scheduler(pm_algo algo) : algo_(algo) {}
 
 }
