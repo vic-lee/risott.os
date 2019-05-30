@@ -12,7 +12,8 @@ class ProcessManager
 
 public:
     ProcessManager();
-    pid_t load_new_process();
+    pid_t load();
+    pid_t find(pid_t pid);
     size_t active_process_count() const;
 
 private:

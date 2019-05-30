@@ -10,7 +10,7 @@ const unsigned int ProcessManager::MAX_ACTIVE_PROCESS_COUNT_ = 500;
 
 ProcessManager::ProcessManager() {}
 
-pid_t ProcessManager::load_new_process()
+pid_t ProcessManager::load()
 {
     if (active_process_count() >= MAX_ACTIVE_PROCESS_COUNT_)
         return ERR_PROCESS_NOT_INITIATED;
@@ -20,6 +20,14 @@ pid_t ProcessManager::load_new_process()
     processtable_.insert(PCB_t(pid, proc));
 
     return pid;
+}
+
+pid_t ProcessManager::find(pid_t pid)
+{
+    if (processtable_.find(pid) == processtable_.end())
+        return ERR_PROCESS_NOT_INITIATED;
+    else
+        return pid;
 }
 
 size_t ProcessManager::active_process_count() const
