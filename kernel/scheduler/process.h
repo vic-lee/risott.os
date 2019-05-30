@@ -10,6 +10,8 @@ namespace scheduler
 typedef int pid_t;
 typedef int framenum_t;
 
+const pid_t ERR_PROCESS_NOT_INITIATED = -1;
+
 const size_t MAX_PRIORITY = 5;
 const size_t MIN_PRIORITY = 1;
 

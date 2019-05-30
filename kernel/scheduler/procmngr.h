@@ -12,7 +12,7 @@ class ProcessManager
 
 public:
     ProcessManager();
-    bool load_new_process();
+    pid_t load_new_process();
     size_t active_process_count() const;
 
 private:
